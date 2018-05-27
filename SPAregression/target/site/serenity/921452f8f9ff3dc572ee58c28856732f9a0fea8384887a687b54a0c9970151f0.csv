@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Verify Login to Application","Verify user is able to login with correct credentials","SUCCESS","2018-05-27T11:06:42.908-07:00[America/Los_Angeles]","0.0","9.44"
+"Verify Login to Application","Verify user is not able to login with Invalid credentials","SUCCESS","2018-05-27T11:06:52.366-07:00[America/Los_Angeles]","0.0","7.76"
+"Logout of the Application","Verify user is able to logout when required","ERROR","2018-05-27T11:07:00.137-07:00[America/Los_Angeles]","0.0","35.69"

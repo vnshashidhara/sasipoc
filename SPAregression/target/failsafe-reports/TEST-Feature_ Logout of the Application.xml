@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="Feature: Logout of the Application" time="35.672" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
+    <property name="java.vm.version" value="25.171-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\shashi\Documents\sasi\SPAregression"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\shashi\Documents\sasi\SPAregression"/>
+    <property name="java.runtime.version" value="1.8.0_171-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\shashi\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\Maven\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Program Files\Git\cmd;C:\Program Files\Maven\bin;;."/>
+    <property name="maven.conf" value="C:\Program Files\Maven\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\Maven\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\shashi"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="shashi"/>
+    <property name="java.class.path" value="C:\Program Files\Maven\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_171"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_171\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_171\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\Maven\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="Verify user is able to logout when required" classname="Logout of the Application" time="35.672">
+    <error message="Timed out after 1 seconds. Element not found&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;&#10;System info: host: &apos;DESKTOP-0DT1VUS&apos;, ip: &apos;10.246.144.219&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+Timed out after 1 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-0DT1VUS', ip: '10.246.144.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+</error>
+    <system-out><![CDATA[[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[91m
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED WITH ERROR: Verify user is able to logout when required
+---------------------------------------------------------------------&amp#27;[0m
+[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[91mTEST FAILED AT STEP Then He should land on Login view&amp#27;[0m
+[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Timed out after 1 seconds. Element not found
+
+&amp#27;[31mFailed scenarios:&amp#27;[0m
+&amp#27;[31msrc/test/resources/features/logout/Logout.feature:6 &amp#27;[0m# Verify user is able to logout when required
+
+3 Scenarios (&amp#27;[31m1 failed&amp#27;[0m, &amp#27;[32m2 passed&amp#27;[0m)
+9 Steps (&amp#27;[31m1 failed&amp#27;[0m, &amp#27;[32m8 passed&amp#27;[0m)
+0m53.175s
+
+org.openqa.selenium.NoSuchElementException: Timed out after 1 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-0DT1VUS', ip: '10.246.144.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:173)
+	at net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:125)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy19.isDisplayed(Unknown Source)
+	at com.pages.Loginpage.verifyIfPageLoaded(Loginpage.java:24)
+	at steps.login.LoginStepDefinitions.verifyHomePageisLaoded(LoginStepDefinitions.java:52)
+	at ?.He should land on Login view(src/test/resources/features/logout/Logout.feature:9)
+
+]]></system-out>
+    <system-err><![CDATA[[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Given Luke is logged into the application
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 22621Only local connections are allowed.May 27, 2018 11:07:02 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - FINISHING STEP
+[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP When He try to Logout of the application
+[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - FINISHING STEP
+[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - STARTING STEP Then He should land on Login view
+[pool-1-thread-1] INFO net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[91mSTEP ERROR: org.openqa.selenium.NoSuchElementException: Timed out after 1 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-0DT1VUS', ip: '10.246.144.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-0DT1VUS', ip: '10.246.144.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown&amp#27;[0m
+[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[91m
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED WITH ERROR: Verify user is able to logout when required
+---------------------------------------------------------------------&amp#27;[0m
+[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[91mTEST FAILED AT STEP Then He should land on Login view&amp#27;[0m
+[pool-1-thread-1] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Timed out after 1 seconds. Element not found
+]]></system-err>
+  </testcase>
+</testsuite>

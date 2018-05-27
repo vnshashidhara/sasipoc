@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: Feature: Logout of the Application
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 35.672 s <<< FAILURE! - in Feature: Logout of the Application
+Verify user is able to logout when required(Logout of the Application)  Time elapsed: 35.672 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Timed out after 1 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-0DT1VUS', ip: '10.246.144.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: unknown
+

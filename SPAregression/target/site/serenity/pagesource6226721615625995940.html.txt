@@ -1,0 +1,382 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="cafeTownsend" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+  <title>CafeTownsend-AngularJS-Rails</title>
+  <script defer="" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script defer="defer" src="/assets/application-80c5acac4ae74cf0fc0a3c0389e3c33f.js"></script>  <link href="/assets/application-a391b73221f73c2161edd8987363832a.css" media="screen" rel="stylesheet" />
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="L7iKGoRubGgyMb07zJOLS+UjJ6S4rT0ePmpeM92xyvA=" name="csrf-token" />
+
+</head>
+
+<body style="">
+
+<div class="main-view ng-scope main-view-employees" ng-controller="MainController" ng-class="{login:'main-view-loggedIn',&#10;    employees:'main-view-employees',&#10;    edit:'main-view-edit',&#10;    create:'main-view-create'}[viewState.current]" style="">
+  <header ng-controller="HeaderController" class="ng-scope">
+    <div ng-class="{'hide-header':!authorized()}" class="header-container" style="">
+      <p class="main-button" ng-click="logout()">Logout</p>
+      <p id="greetings" class="ng-binding">Hello Luke</p>
+    </div>
+  </header>
+
+  <div class="main-view-wrapper main-view-wrapper-employees" ng-class="{login:'main-view-wrapper-loggedIn',&#10;      employees:'main-view-wrapper-employees',&#10;      edit:'main-view-wrapper-edit',&#10;      create:'main-view-wrapper-create'}[viewState.current]" style="">
+    <!-- ngView:  --><div ng-view="" class="main-view-container ng-scope"><ul id="sub-nav" class="ng-scope">
+  <li><a id="bAdd" class="subButton" ng-click="createEmployee()">Create</a></li>
+  <li><a id="bEdit" class="subButton disabled" ng-class="!selectedEmployee &amp;&amp; 'disabled'" ng-click="editEmployee()">Edit</a></li>
+  <li><a id="bDelete" class="subButton disabled" ng-class="!selectedEmployee &amp;&amp; 'disabled'" ng-click="deleteEmployee()">Delete</a></li>
+</ul>
+
+<div id="employee-list-container" class="ng-scope">
+  <ul id="employee-list">
+    <!-- ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Harry Potter
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Harry Potter
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Jack Jones
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Jack Jones
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName821 LastName821
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName821 LastName821
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      dfvdv dfvdfvdvf
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName900 LastName900
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName900 LastName900
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      hyoxiiphvq lpdajpzdls
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName596 LastName596
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName596 LastName596
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName543 LastName543
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      jvaogacwcy crstyqhjeo
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName288 LastName288
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName288 LastName288
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName288 LastName288
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Rabi Roy
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testpro testpro
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Test Mar23 adfds
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName389 LastName389
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName342 LastName342
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName586 LastName586
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName313 LastName313
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName26 LastName26
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName26 LastName26
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName164 LastName164
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName26 LastName26
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName329 LastName329
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName175 LastName175
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName609 LastName609
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName888 LastName888
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName888 LastName888
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName941 LastName941
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName891 LastName891
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      saaravanan bhaskaran
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      v oo
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName233 LastName233
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName492 LastName492
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName78 LastName78
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName482 LastName482
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      anna chinna
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Ona Witting
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Snow
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Daenerys Targaryen
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Severus Snape
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName998 LastName998
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Snow
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Kuku Ryku
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName440 LastName440
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName375 LastName375
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Daenerys Targaryen
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName313 LastName313
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Severus Snape
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Severus Snape
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName661 LastName661
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Severus Snape
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName384 LastName384
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName799 LastName799
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      pavan Ghanta
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName72 LastName72
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Chandresh Tester
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      happy minded
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName890 LastName890
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Snow
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Virat Kohli
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName537 LastName537
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName900 LastName900
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      1222 454
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Arup Das
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Tinks Tinks
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Nimo Chak
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      x x
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Watson
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Snow
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Laron Crona
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Gabriel Zanin
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName115 LastName115
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      FirstName271 LastName271
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Snow
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      John Doe
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Daenerys Targaryen
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Cersei Lannister
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Harsh Chauhan
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Bryce Klein
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Daenerys6767 Targaryen
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Jim Morrison
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      testing f testing l
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      werwew werer
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      sdfsa dsfasd
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Dummy Bot1524925871577
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      mazhar hussain
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      1111 1111
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Dummy Bot1524926316340
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      PrimerNombre Apellido
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      ojctgihiru xufscuplxp
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      test test
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      hhstkwpbid kehpzkkvkk
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Test25032018 LastName
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Anna Kournikova
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Bruce Wayne
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      adasd asd
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      My name Last Name
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      test tetsts2
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      !"§%$&amp; 123456
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fsdasd sdasd
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      ssa as
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      kos kok
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      koushik koushik
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      koushik koushik
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      KoushikTest chattest
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      hello1232323@$% world
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      adfsdf sdfs
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      first TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      Premier TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      fourth TestUser
+    </li><!-- end ngRepeat: employee in employees --><li ng-repeat="employee in employees" ng-click="selectEmployee(employee)" ng-dblclick="editEmployee()" ng-class="employee.id == selectedEmployee.id &amp;&amp; 'active'" class="ng-scope ng-binding">
+      third TestUser
+    </li><!-- end ngRepeat: employee in employees -->
+  </ul>
+</div>
+
+</div>
+  </div>
+
+  <footer>
+    <p>
+      Built with <a href="http://angularjs.org/">AngularJS</a>,
+      <a href="http://coffeescript.org/">CoffeeScript</a>,
+      <a href="http://bourbon.io/">Bourbon</a> and <a href="http://rubyonrails.org/">Rails</a>.<br />
+    </p>
+
+    <p>
+      <a href="https://github.com/sectore/CafeTownsend-Angular-Rails">Get source code</a> by
+      <a href="http://www.websector.de">Jens Krause</a> @2012-2014
+    </p>
+  </footer>
+</div>
+
+</body></html>

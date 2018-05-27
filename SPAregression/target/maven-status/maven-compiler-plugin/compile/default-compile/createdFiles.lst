@@ -1,0 +1,4 @@
+com\pages\Loginpage.class
+com\pages\BasePage.class
+com\webDriver\WrappedDriver.class
+com\pages\FollettSpa.class

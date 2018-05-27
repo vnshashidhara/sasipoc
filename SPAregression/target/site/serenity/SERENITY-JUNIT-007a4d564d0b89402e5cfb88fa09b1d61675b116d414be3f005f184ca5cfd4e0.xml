@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Verify Login to Application" skipped="0" tests="2" time="17.2" timestamp="2018-05-27 11:06:42"><testcase name="Verify user is able to login with correct credentials"/><testcase name="Verify user is not able to login with Invalid credentials"/></testsuite>
